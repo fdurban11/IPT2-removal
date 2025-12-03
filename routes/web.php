@@ -19,6 +19,6 @@ Route::get('/', function () {
 });
 
 // Product routes
-Route::resource('products', ProductController::class);
 Route::get('products/search', [ProductController::class, 'search'])->name('products.search');
 Route::get('products/filter/{status}', [ProductController::class, 'filterByStock'])->name('products.filter');
+Route::resource('products', ProductController::class);
